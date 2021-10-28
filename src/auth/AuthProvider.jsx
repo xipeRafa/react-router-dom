@@ -25,12 +25,14 @@ const AuthProvider = ({ children }) => {
       setUser(null);
     },
     isLogged() {
-      return !!user;
+      return user;
     },
   };
 
   return (
-    <AuthContext.Provider value={contextValue}>{children}</AuthContext.Provider>
+    <AuthContext.Provider value={contextValue}>
+        {children}
+    </AuthContext.Provider>
   );
 };
 

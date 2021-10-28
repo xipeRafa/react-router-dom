@@ -18,12 +18,13 @@ export default function AppRouter() {
   return (
     <Router>
       <Navbar />
+      <h3>I am in every page</h3> {/* // lo que esta afuera de el switch se ve en todas las paginas */}
       <Switch>
         <Route exact path="/about" component={AboutPage}/>
         <Route exact path="/contact" component={ContactPage}/>
-        <Route exact path="/" component={HomePage}/>
+        <Route exact path="/" component={HomePage}/> {/* poner a lo ultimo */}
         
-        <Route exact path="/profile/:username" component={ProfilePage}/>
+        <Route exact path="/profile/:username" component={ProfilePage}/> {/* :userName lee variables */}
         <Route exact path="/categories" component={CategoriesPage}/>
 
         <Route exact path="/signin">

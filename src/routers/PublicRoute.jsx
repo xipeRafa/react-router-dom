@@ -1,8 +1,8 @@
 import { Route, Redirect } from "react-router-dom";
-import useAuth from "../auth/useAuth";
+import useAuthContext from "../auth/useAuthContext";
 
 export default function PublicRoute({ component: Component, ...rest }) {
-  const auth = useAuth();
+  const auth = useAuthContext();
 
   return (
     <Route {...rest}>

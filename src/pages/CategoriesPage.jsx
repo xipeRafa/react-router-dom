@@ -1,5 +1,7 @@
 import { useLocation, useHistory } from 'react-router-dom'
 
+/* ?skip=3&limit=10 */
+
 export default function CategoriesPage() {
     const location = useLocation();
     const history = useHistory();
@@ -12,7 +14,7 @@ export default function CategoriesPage() {
         query.set("skip", skip + limit)
         // query.set("limit", 200)
 
-        history.push({search: query.toString() })
+        history.push({search: query.toString() })  
     }
 
     return (

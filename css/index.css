@@ -20,8 +20,8 @@ code {
 }
 
 .App{
-  width: 80%;
-  margin-left: 10%;
+  width: 96%;
+  margin-left: 2%;
   height: 100vh;
   text-align: center;
   padding-top: 20px;
@@ -49,9 +49,19 @@ ul{
   border: 2px solid rgba(255, 0, 0, 0.603);
   background: rgba(0, 0, 0, 0.12);
   padding: 16px;
+  padding-right: 46px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+@media (max-width: 1025px) {
+  ul{
+    flex-direction: column;
+    padding-right: 0;
+  }
+  li{
+    margin: 8px;
+  }
 }
 li{
   list-style: none;
@@ -60,4 +70,9 @@ li{
 }
 button{
   padding: 2px 10px;
+}
+h3{
+  border-bottom: 2px solid ;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
 }
