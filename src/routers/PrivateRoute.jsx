@@ -19,3 +19,5 @@ export default function PrivateRoute({ component: Component, ...rest }) {
     </Route>
   );
 }
+
+/*  solo se renderiza si el user esta logueado */

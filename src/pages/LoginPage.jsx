@@ -4,12 +4,12 @@ import useAuthContext from "../auth/useAuthContext";
 export default function LoginPage() {
     const history = useHistory();
     const location = useLocation();
-    const previusObjectURL = location.state?.from;
+    const previusObjectURL = location.state?.from; /* null safety operator */
 
     const auth = useAuthContext();
     const handleLogin = () => {
         auth.login();
-        history.push(previusObjectURL || "/dashboard")
+        history.push(previusObjectURL || "/dashboard") /*  ir a daschboar si no esta en  */
     }
 
     return (

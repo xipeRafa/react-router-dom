@@ -4,7 +4,6 @@ import PrivateRoute from "./PrivateRoute";
 import PublicRoute from "./PublicRoute";
 
 import AboutPage from "../pages/AboutPage";
-import CategoriesPage from "../pages/CategoriesPage";
 import ContactPage from "../pages/ContactPage";
 import DashboardPage from "../pages/DashboardPage";
 import HomePage from "../pages/HomePage";
@@ -13,6 +12,7 @@ import NotFoundPage from "../pages/NotFoundPage";
 import PaymentsPage from "../pages/PaymentsPage";
 import ProfilePage from "../pages/ProfilePage";
 import RegisterPage from "../pages/RegisterPage";
+import CategoriesRouter from "./CategoriesRouter";
 
 export default function AppRouter() {
   return (
@@ -25,7 +25,8 @@ export default function AppRouter() {
         <Route exact path="/" component={HomePage}/> {/* poner a lo ultimo */}
         
         <Route exact path="/profile/:username" component={ProfilePage}/> {/* :userName lee variables */}
-        <Route exact path="/categories" component={CategoriesPage}/>
+        
+        <Route path="/categories" component={CategoriesRouter}/>
 
         <Route exact path="/signin">
             <Redirect to="/login"/>

@@ -14,3 +14,5 @@ export default function PublicRoute({ component: Component, ...rest }) {
     </Route>
   );
 }
+
+/*  se renderizan sin estar logueados */
